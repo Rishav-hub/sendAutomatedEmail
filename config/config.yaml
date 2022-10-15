@@ -1,0 +1,8 @@
+required_columns:
+  email_id: "Email address"
+  name: "Name"
+  remarks: "Remarks / Mail Body"
+
+senders_info:
+  sender_email: "9930046@gmail.com"
+  passkey: 
