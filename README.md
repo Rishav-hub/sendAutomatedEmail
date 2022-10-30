@@ -1,9 +1,16 @@
 # This is an automated email code
-Create a config.ini file inside getCredentials folder
-
+In this config\app_constants.py folder
+change details according to your need
 ```
-[DEFAULT]
-eMAILsender=<>
-ePASSKEY=<>
+email_id= "Email address"
+name= "Name"
+remarks= "Remarks"
+
+sender_email= "riishav@ineuron.ai"
+passkey= ""
+
+folder_path= "artifacts"
+file_name= "2_FSDS Bootcamp 2.0 _ Assignment 005 _ Oct 16 (Responses) - Form responses 1.csv"
+assignment_no= 5
 ```
 
