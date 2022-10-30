@@ -2,15 +2,19 @@ import smtplib
 import os
 from email.message import EmailMessage
 from getCredentials.read import ConfigReader
+from config.app_constants import sender_email, passkey
 
 CURRENT_FOLDER = "sendDetailedEmail"
 
 HTML_TEMPLATE_NAME = "Template_corona_info.html"
 HTML_TEMPLATE_PATH = os.path.join(CURRENT_FOLDER, HTML_TEMPLATE_NAME)
 
-AUTH_DATA = ConfigReader()
-eMAIL = AUTH_DATA.read_config()['eMAILsender']
-ePASSKEY = AUTH_DATA.read_config()["ePASSKEY"]
+# AUTH_DATA = ConfigReader()
+# eMAIL = AUTH_DATA.read_config()['eMAILsender']
+# ePASSKEY = AUTH_DATA.read_config()["ePASSKEY"]
+
+eMAIL = sender_email
+ePASSKEY = passkey
 
 class MailAttachment:
 
@@ -24,7 +28,7 @@ class MailAttachment:
         """_summary_: This method sends an email with an attachment to the client.
         """        
         msg = EmailMessage()
-        msg["Subject"] = f"FSDS 2.0 || Assignment {self.assignment_no} Evaluation"
+        msg["Subject"] = f"FSDS Bootcamp 2.0 || Assignment {self.assignment_no} Evaluation"
         msg["From"] = eMAIL
         msg["To"] = "query@ineuron.ai"
         msg["bcc"] = self.clientEmail

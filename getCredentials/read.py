@@ -21,5 +21,5 @@ class ConfigReader:
 
         return self.configuration
 
-
+    
 
